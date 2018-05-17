@@ -9,7 +9,13 @@ class BinaryTree(object):
 
     def append(self, data):
         if data <= self.data:
-            self.left = BinaryTree(data)
+            if self.left is None:
+                self.left = BinaryTree(data)
+            else:
+                self.left.append(data)
         else:
-            self.right = BinaryTree(data)
+            if self.right is None:
+                self.right = BinaryTree(data)
+            else:
+                self.right.append(data)
         
