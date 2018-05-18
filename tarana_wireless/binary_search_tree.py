@@ -18,4 +18,13 @@ class BinaryTree(object):
                 self.right = BinaryTree(data)
             else:
                 self.right.append(data)
+
+    def print_in_order():
+        if self.left:
+            self.left.print_in_order()
+        
+        print(self.data)
+        
+        if self.right:
+            self.right.print_in_order()
         
