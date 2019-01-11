@@ -1,1 +1,25 @@
+**Collection of Python, Machine Learning and Data Science interview questions**
 
+- Is Python compiled or interpreted language?
+- Difference between del, remove and pop on lists
+- Python other implementations?
+- Disadvantages of CPython?
+- Difference between Python & Java?
+- Important features of Python?
+- Built-in data types & structures?
+- Difference between list & tuple?
+- What are Python generators?
+- What are Python iterators?
+- Difference between generators & iterators?
+- What are decorators?
+- What is Monkey patching?
+- Instance method, class method & static method difference?
+- What are closures, when & how to use it?
+- What are context managers?
+- How to create user defined context manager?
+- Exceptions in Python & how to create user defined exception?
+- How Python manages memory?
+- How garbage collection works in Python & how to do it explicitly?
+- Multi threading & multiprocessing, when to use which?
+- Method overloading & overriding in Python?
+- What is single dispatch overloading?
