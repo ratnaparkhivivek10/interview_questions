@@ -19,7 +19,7 @@ class BinaryTree(object):
             else:
                 self.right.append(data)
 
-    def print_in_order():
+    def print_in_order(self):
         if self.left:
             self.left.print_in_order()
         
