@@ -19,24 +19,17 @@ def check_balanced_braces(braces):
                 if opening.index(brace_stack[-1]) == closing.index(brace):
                     brace_stack.pop()
     
-    if brace_stack:
-        return False
-    else:
-        return True
+    return False if brace_stack else True
 
 
-data = '{}[]()'
-data = '{[}]'
-data = '{[()]}'
-data = '}][}}(}][))]'
-is_balanced = check_balanced_braces(data)
-
-print(is_balanced)
-
-
-
-import unittest
-
-class BalancedBraceTest(unittest.TestCase):
-    def test_balanced_braces(self):
-        pass
+assert check_balanced_braces('{}[]()') == True
+assert check_balanced_braces('{[}]') == False
+assert check_balanced_braces('{[()]}') == True
+assert check_balanced_braces('{[(])}') == False
+assert check_balanced_braces('{{[[(())]]}}') == True
+assert check_balanced_braces('}][}}(}][))]') == False
+assert check_balanced_braces('[](){()}') == True
+assert check_balanced_braces('()') == True
+assert check_balanced_braces('({}([][]))[]()') == True
+assert check_balanced_braces('{)[](}]}]}))}(())(') == False
+assert check_balanced_braces('([[)') == False
