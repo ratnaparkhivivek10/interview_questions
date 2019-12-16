@@ -4,7 +4,9 @@ def check_balanced_braces(braces):
     closing = ['}', ']', ')']
 
     brace_stack = []
-
+    # empty string - return true
+    if not braces:
+        return True
     # first closing bracket case - return false
     if braces[0] in closing:
         return False
@@ -18,10 +20,18 @@ def check_balanced_braces(braces):
             else:
                 if opening.index(brace_stack[-1]) == closing.index(brace):
                     brace_stack.pop()
+                else:
+                    break
     
-    return False if brace_stack else True
+    if brace_stack:
+        return False
+    else:
+        return True
 
 
+assert check_balanced_braces('') == True
+assert check_balanced_braces('{') == False
+assert check_balanced_braces('{})') == False
 assert check_balanced_braces('{}[]()') == True
 assert check_balanced_braces('{[}]') == False
 assert check_balanced_braces('{[()]}') == True
@@ -33,3 +43,4 @@ assert check_balanced_braces('()') == True
 assert check_balanced_braces('({}([][]))[]()') == True
 assert check_balanced_braces('{)[](}]}]}))}(())(') == False
 assert check_balanced_braces('([[)') == False
+assert check_balanced_braces('({]])]})]}([)}{][)]{}{(])}([]}])})}([]}({}([{][{}') == False
