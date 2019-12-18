@@ -23,3 +23,6 @@
 - Multi threading & multiprocessing, when to use which?
 - Method overloading & overriding in Python?
 - What is single dispatch overloading?
+- Difference between delete and truncate?
+- SQL aggregate functions that will will not consider Null values?
+- Difference between test plan and test strategy?
